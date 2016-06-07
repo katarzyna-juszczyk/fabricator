@@ -1,0 +1,63 @@
+// Settings ---- Sass vars, etc.
+// Tools ------- Functions and mixins.
+// Generic ----- Generic, high-level styling, like resets, etc.
+// Base -------- Unclasses HTML elements (e.g. `h2`, `ul`).
+// Objects ----- Objects and abstractions.
+// Components -- Your designed UI elements (inuitcss includes none of these).
+// Trumps ------ Overrides and helper classes.
+
+
+// SETTINGS:
+@import "settings/variables";
+@import "../../../../node_modules/inuit-defaults/settings.defaults";
+@import "../../../../node_modules/inuit-responsive-settings/settings.responsive";
+
+// TOOLS:
+@import "../../../../node_modules/inuit-functions/tools.functions";
+@import "../../../../node_modules/inuit-mixins/tools.mixins";
+@import "../../../../node_modules/inuit-responsive-tools/tools.responsive";
+@import "../../../../node_modules/inuit-tools-widths/tools.widths";
+
+// GENERIC:
+@import "../../../../node_modules/inuit-normalize/generic.normalize";
+@import "../../../../node_modules/inuit-box-sizing/generic.box-sizing";
+@import "../../../../node_modules/inuit-reset/generic.reset";
+@import "../../../../node_modules/inuit-shared/generic.shared";
+
+// BASE:
+@import "../../../../node_modules/inuit-headings/base.headings";
+@import "../../../../node_modules/inuit-paragraphs/base.paragraphs";
+@import "../../../../node_modules/inuit-lists/base.lists";
+@import "../../../../node_modules/inuit-images/base.images";
+@import "../../../../node_modules/inuit-page/base.page";
+
+// OBJECTS:
+@import "../../../../node_modules/inuit-block/objects.block";
+@import "../../../../node_modules/inuit-box/objects.box";
+@import "../../../../node_modules/inuit-buttons/objects.buttons";
+@import "../../../../node_modules/inuit-flag/objects.flag";
+@import "../../../../node_modules/inuit-layout/objects.layout";
+@import "../../../../node_modules/inuit-list-bare/objects.list-bare";
+@import "../../../../node_modules/inuit-list-block/objects.list-block";
+@import "../../../../node_modules/inuit-list-inline/objects.list-inline";
+@import "../../../../node_modules/inuit-list-ui/objects.list-ui";
+@import "../../../../node_modules/inuit-media/objects.media";
+
+@import "../../../../node_modules/inuit-pack/objects.pack";
+@import "../../../../node_modules/inuit-tables/objects.tables";
+@import "../../../../node_modules/inuit-tabs/objects.tabs";
+
+// COMPONTENTS:
+// > Your components here <
+
+// TRUMPS:
+@import "../../../../node_modules/inuit-clearfix/trumps.clearfix";
+@import "../../../../node_modules/inuit-headings-trumps/trumps.headings";
+@import "../../../../node_modules/inuit-spacing/trumps.spacing";
+@import "../../../../node_modules/inuit-widths/trumps.widths";
+
+@import "../../../../node_modules/inuit-print/trumps.print";
+
+body {
+	font-family: sans-serif;
+}

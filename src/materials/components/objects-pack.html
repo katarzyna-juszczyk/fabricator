@@ -1,0 +1,39 @@
+---
+notes: |
+  Basic usage and optional classes:
+
+  `.pack--auto`: cause packed items to have an automatically determined,
+    non-equal width.
+
+  `.pack--[tiny|small|large|huge]`: alter the gutter between pack items.
+
+  `.pack--rev`: reverse the rendered horizontal order of packed items.
+  
+  `.pack--[middle|bottom]`: align packed items to the middles or bottoms of each
+    other.
+
+---
+    <div class="pack">
+        <div class="pack__item">
+            Foo
+        </div>
+        <div class="pack__item">
+            Bar
+        </div>
+        <div class="pack__item">
+            Baz
+        </div>
+    </div>
+
+
+    <div class="pack  pack--small  pack--rev">
+        <div class="pack__item">
+            Foo
+        </div>
+        <div class="pack__item">
+            Bar
+        </div>
+        <div class="pack__item">
+            Baz
+        </div>
+    </div>
