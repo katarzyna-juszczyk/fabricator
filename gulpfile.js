@@ -18,8 +18,8 @@ var config = {
 	dev: $.util.env.dev,
 	src: {
 		scripts: {
-			fabricator: './src/assets/fabricator/scripts/fabricator.js',
-			toolkit: './src/assets/toolkit/scripts/toolkit.js'
+			fabricator: './src/assets/fabricator/scripts/fabricator.js'
+			//toolkit: './src/assets/toolkit/scripts/toolkit.js'
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
@@ -73,16 +73,21 @@ gulp.task('styles:toolkit', function () {
 gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
 
+gulp.task('scriptsShame', function () {
+	return gulp.src(['./src/assets/toolkit/scripts/**/*'])
+		.pipe(gulp.dest(config.dest + '/assets/toolkit/scripts'));
+});
+
 // scripts
 gulp.task('scripts', function (done) {
 	webpackCompiler.run(function (error, result) {
 		if (error) {
-			$.util.log(gutil.colors.red(error));
+			$.util.log($.util.colors.red(error));
 		}
 		result = result.toJson();
 		if (result.errors.length) {
 			result.errors.forEach(function (error) {
-				gutil.log(gutil.colors.red(error));
+				$.util.log($.util.colors.red(error));
 			});
 		}
 		done();
@@ -148,11 +153,15 @@ gulp.task('serve', function () {
 	gulp.task('styles:fabricator:watch', ['styles:fabricator']);
 	gulp.watch('src/assets/fabricator/styles/**/*.scss', ['styles:fabricator:watch']);
 
-	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
+	gulp.task('styles:toolkit:watch', ['styles:toolkit'], reload);
 	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
-	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
+	gulp.watch('src/assets/{fabricator}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
+
+	gulp.task('scriptsShame:watch', ['scriptsShame']);
+	gulp.watch('src/assets/toolkit/scripts/**/*.js', ['scriptsShame:watch']);
+
 
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
@@ -167,6 +176,7 @@ gulp.task('default', ['clean'], function () {
 	var tasks = [
 		'styles',
 		'scripts',
+		'scriptsShame',
 		'images',
 		'assemble'
 	];
