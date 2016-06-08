@@ -1,23 +1,13 @@
 .navbar__header {
+  @include diagonal-clip-path-element($background--medium);
   background: $background--medium;
-  padding-right: 50px;
-  position: relative;
-  &:after {
-    content:'';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 25px;
-    background: $background--medium;
-  }
+  padding-right: 10px;
+  white-space: nowrap;
+  * { white-space: normal;}
 }
 
 .navbar__brand {
   color: $text--color-negative;
-}
-
-.navbar--channel__toggle.collapsed {
 }
 
 .sr-only {

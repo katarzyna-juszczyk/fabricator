@@ -1,0 +1,16 @@
+@mixin diagonal-clip-path-element($color) {
+  position: relative;
+  &:after {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: -25px;
+    bottom: 0;
+    width: 25px;
+    background: $color;
+    clip-path: polygon(0 0, 100% 0%, 0 100%, 0% 100%);
+  }
+  & + * {
+    padding-left: 25px;
+  }
+}

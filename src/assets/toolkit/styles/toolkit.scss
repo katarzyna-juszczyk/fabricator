@@ -18,6 +18,7 @@
 @import "../../../../node_modules/inuit-mixins/tools.mixins";
 @import "../../../../node_modules/inuit-responsive-tools/tools.responsive";
 @import "../../../../node_modules/inuit-tools-widths/tools.widths";
+@import "tools/mixins";
 
 // GENERIC:
 @import "../../../../node_modules/inuit-normalize/generic.normalize";
@@ -51,10 +52,12 @@
 @import "../../../../node_modules/inuit-tabs/objects.tabs";
 
 // COMPONTENTS:
+@import "components/buttons";
 @import "components/dropdown";
 @import "components/navbar/nav";
 @import "components/navbar/navbar";
 @import "components/navbar/navbar__header";
+@import "components/navbar/navbar-channel";
 @import "components/navbar/navbar__form";
 @import "components/navbar/navbar__user";
 

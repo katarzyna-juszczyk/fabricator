@@ -2,6 +2,8 @@
 .nav {
   width: 100%;
   max-width: 100%;
+  background: $background--dark;
+  @include diagonal-clip-path-element($background--dark);
   a {
     color: $text--color-negative;
   }
