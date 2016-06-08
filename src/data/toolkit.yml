@@ -1,8 +1,12 @@
 colors:
   primary:
-    Dark: "rgb(30, 30, 30)"
-    Light: "rgb(242, 242, 242)"
+    Light blue: "rgb(0, 144, 212)"
+    Blue: "#326295"
+    Dark blue: "#364760"
+    Green: "#4f891b"
+    Dark green: "#226d19"
+    Red: "#bd141a"
+    Dark red: "#a70c0f"
   secondary:
-    Red: "rgb(201, 55, 6)"
-    Yellow: "rgb(252, 207, 80)"
-    Blue: "rgb(39, 102, 143)"
+    Light grey: "#eff2f9"
+    Grey: "#d5dae6"
