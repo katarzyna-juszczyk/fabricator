@@ -1,5 +1,5 @@
 .navbar__header {
-  @include diagonal-clip-path-element($background--medium);
+  @include diagonal-clip-path-element($background--dark, right);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

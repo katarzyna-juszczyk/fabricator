@@ -1,14 +1,19 @@
-@mixin diagonal-clip-path-element($color) {
+@mixin diagonal-clip-path-element($color, $side) {
   position: relative;
   &:after {
     content:'';
     position: absolute;
     top: 0;
-    right: -24px;
+    right: -25px;
     bottom: 0;
     width: 25px;
     background: $color;
-    clip-path: polygon(0 0, 100% 0%, 0 100%, 0% 100%);
+    @if ($side == left) {
+      clip-path: polygon(0 0, 100% 0%, 0 100%, 0% 100%);
+    } @elseif ($side == right) {
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+
   }
   & + * {
     padding-left: 25px;
