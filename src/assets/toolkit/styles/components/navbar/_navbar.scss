@@ -1,5 +1,7 @@
 .navbar {
-
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .navbar__mobile-toggle {
@@ -7,7 +9,10 @@
 }
 .navbar__right {
   background: $background--medium;
+  min-width: 210px;
+  text-align: right;
 }
 
 .navbar__collapse {
+  flex: 1;
 }

@@ -1,9 +1,17 @@
-.navbar-channel__menu {
+.navbar__channel__menu {
   display: inline-block;
 }
-.navbar-channel__toggle {
+.navbar__channel__toggle {
+    .icon {
+      display: inline-block;
+      margin-left: 2px;
+      background: $background--lightest;
+      width: 4px;
+      height: 4px;
+      box-shadow: 6px 0 $background--lightest, 0 -6px $background--lightest, 6px -6px $background--lightest
 
+    }
 }
-.navbar-channel__dropdown {
+.navbar__channel__dropdown {
 
 }

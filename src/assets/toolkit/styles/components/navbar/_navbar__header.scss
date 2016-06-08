@@ -1,9 +1,11 @@
 .navbar__header {
   @include diagonal-clip-path-element($background--medium);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
   background: $background--medium;
   padding-right: 10px;
-  white-space: nowrap;
-  * { white-space: normal;}
 }
 
 .navbar__brand {

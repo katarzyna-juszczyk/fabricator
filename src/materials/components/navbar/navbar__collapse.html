@@ -1,9 +1,9 @@
-<div class="collapse navbar__collapse pack__item" id="navbarCollapse">
+<div class="collapse navbar__collapse" id="navbarCollapse">
   <div class="pack pack--auto pack--middle">
       <ul class="nav list-inline pack__item">
         <li class="nav__dropdown">
           <div class="dropdown">
-            <button id="navDropdownToggle" class="nav__dropdown-toggle" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events <span class="caret"></span></button>
+            <button id="navDropdownToggle" class="nav__dropdown-toggle btn btn--plain btn--small" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events <span class="caret"></span></button>
             <ul class="nav__dropdown-menu dropdown-menu" aria-labelledby="navDropdownToggle">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
@@ -14,19 +14,13 @@
           </div>
         </li>
         <li class="active"><a href="#">News <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contacts</a></li>
-        <li><a href="#">2018 Media Kit</a></li>
+        <li><a class="btn btn--plain btn--small" href="#">Calendar</a></li>
+        <li><a class="btn btn--plain btn--small" href="#">Gallery</a></li>
+        <li><a class="btn btn--plain btn--small" href="#">Contacts</a></li>
+        <li><a class="btn btn--plain btn--small" href="#">2018 Media Kit</a></li>
       </ul>
 
-      <div class="navbar__right pack__item">
-        <form class="navbar__form" role="search">
-            <input type="text" class="navbar__form-input" placeholder="Search">
-            <button type="submit" class="navbar__form-submit">Submit</button>
-        </form>
-        <a class="navbar__user" href="#">User</a>
-      </div>
+      {{> navbar.navbar__right}}
 
     </ul>
   </div>

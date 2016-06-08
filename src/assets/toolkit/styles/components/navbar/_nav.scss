@@ -13,6 +13,18 @@
 }
 
 .nav__dropdown-toggle {
+  color: $text--color-negative;
+  .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: relative;
+    top: -2px;
+    border-top: 5px solid currentColor;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+
+  }
 }
 
 .caret {
