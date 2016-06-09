@@ -22,4 +22,15 @@ $inuit-enable-pack--rev:    true;
 $inuit-enable-pack--middle: true;
 $inuit-enable-pack--bottom: true;
 
-//lalalafdfsdffd
+$inuit-global-border-box: true;
+
+$breakpoints: (
+	'palm' '(max-width: 768px)',
+	'lap' '(min-width: 769px) and (max-width: 1280px)',
+	'lap-and-up' 'screen and (min-width: 769px)',
+	'portable' '(max-width: 1280px)',
+	'desk' '(min-width: 1281px)'
+);
+
+$use-markup-fix: false;
+

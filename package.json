@@ -51,12 +51,9 @@
     "webpack": "^1.8.11",
 
     "inuit-defaults": "latest",
-    "inuit-responsive-settings": "latest",
 
     "inuit-functions": "latest",
     "inuit-mixins": "latest",
-    "inuit-responsive-tools": "latest",
-    "inuit-tools-widths": "latest",
 
     "inuit-normalize": "latest",
     "inuit-box-sizing": "latest",
@@ -73,7 +70,6 @@
     "inuit-box": "latest",
     "inuit-buttons": "latest",
     "inuit-flag": "latest",
-    "inuit-layout": "latest",
     "inuit-list-bare": "latest",
     "inuit-list-block": "latest",
     "inuit-list-inline": "latest",
@@ -87,8 +83,6 @@
     "inuit-headings-trumps": "latest",
     "inuit-spacing": "latest",
     "inuit-responsive-spacing": "latest",
-    "inuit-widths": "latest",
-    "inuit-responsive-widths": "latest",
 
     "inuit-print": "latest"
   }
