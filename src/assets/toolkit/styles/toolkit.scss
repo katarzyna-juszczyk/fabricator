@@ -11,13 +11,11 @@
 // SETTINGS:
 @import "settings/variables";
 @import "../../../../node_modules/inuit-defaults/settings.defaults";
-@import "../../../../node_modules/inuit-responsive-settings/settings.responsive";
 
 // TOOLS:
 @import "../../../../node_modules/inuit-functions/tools.functions";
 @import "../../../../node_modules/inuit-mixins/tools.mixins";
-@import "../../../../node_modules/inuit-responsive-tools/tools.responsive";
-@import "../../../../node_modules/inuit-tools-widths/tools.widths";
+
 @import "tools/mixins";
 @import "tools/helpers";
 
@@ -41,7 +39,6 @@
 @import "../../../../node_modules/inuit-box/objects.box";
 @import "../../../../node_modules/inuit-buttons/objects.buttons";
 @import "../../../../node_modules/inuit-flag/objects.flag";
-@import "../../../../node_modules/inuit-layout/objects.layout";
 @import "../../../../node_modules/inuit-list-bare/objects.list-bare";
 @import "../../../../node_modules/inuit-list-block/objects.list-block";
 @import "../../../../node_modules/inuit-list-inline/objects.list-inline";
@@ -51,6 +48,8 @@
 @import "../../../../node_modules/inuit-pack/objects.pack";
 @import "../../../../node_modules/inuit-tables/objects.tables";
 @import "../../../../node_modules/inuit-tabs/objects.tabs";
+
+@import "vendor/csswizardry-grids";
 
 // COMPONTENTS:
 @import "components/buttons";
@@ -71,10 +70,14 @@
 @import "../../../../node_modules/inuit-clearfix/trumps.clearfix";
 @import "../../../../node_modules/inuit-headings-trumps/trumps.headings";
 @import "../../../../node_modules/inuit-spacing/trumps.spacing";
-@import "../../../../node_modules/inuit-widths/trumps.widths";
 
 @import "../../../../node_modules/inuit-print/trumps.print";
 
 body {
 	font-family: sans-serif;
+}
+
+.demo-block {
+	padding: 10px;
+	background: $background--lighter;
 }
