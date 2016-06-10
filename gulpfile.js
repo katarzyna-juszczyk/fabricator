@@ -63,11 +63,13 @@ gulp.task('styles:toolkit', function () {
 	gulp.src(config.src.styles.toolkit)
 		.pipe($.sourcemaps.init())
 		.pipe($.sass().on('error', $.sass.logError))
+		.pipe($.combineMq({	beautify: false	}))
 		.pipe($.autoprefixer('last 1 version'))
 		.pipe($.if(!config.dev, $.csso()))
 		.pipe($.sourcemaps.write())
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
 		.pipe($.if(config.dev, reload({stream:true})));
+
 });
 
 gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
@@ -168,6 +170,17 @@ gulp.task('serve', function () {
 
 });
 
+gulp.task('test', ['styles'], function(){
+	return gulp.src(config.dest + '/assets/toolkit/styles/**/*.css')
+			.pipe($.plumber())
+			.pipe($.colorguard({
+					logOk: true,
+					treshold: 3
+			}))
+			.pipe($.plumber())
+			.pipe($.parker())
+			.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'));
+});
 
 // default build task
 gulp.task('default', ['clean'], function () {
