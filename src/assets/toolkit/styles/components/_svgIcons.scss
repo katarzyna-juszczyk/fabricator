@@ -1,18 +1,18 @@
 $display-icons-preview: true;
 $icons-to-preview: "";
 
+
 @each $iconName, $iconColors in $svgIcons {
   @each $colorName, $colorValue in $iconColors {
 
     $icons-to-preview: $icons-to-preview , #{$iconName + '--' + $colorName};
 
     .icon-#{$iconName}--#{$colorName} {
-      display:block;
+      display: inline-block;
       fill: $colorValue;
-      width: 90px;
-      height: 90px;
-      background: #dedede;
       margin: 10px;
+      width: 64px;
+      height: 64px;
     }
 
   }
@@ -20,8 +20,7 @@ $icons-to-preview: "";
 
 /* icons preview stuff */
 @if ($display-icons-preview == true ) {
-  body {border: 10px solid purple;}
-	body::before {
+  body::before {
     content: "#{$icons-to-preview}";
 		display: none;
 	}
@@ -33,5 +32,14 @@ body::after {
 }
 
 .icon-preview {
-	i {padding: 10px}
+	ol {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  li {
+    margin: 20px;
+    flex:1;
+  }
 }
