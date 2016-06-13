@@ -1,5 +1,25 @@
 ---
 notes: |
-  These are notes associated with this `button` component.
+  To add another icon:
+  1. add new svg file to `src/assets/toolkit/svgIcons` directory,
+  2. add an entry to $svgIcons map in `src/assets/toolkit/styles/settings/_variables.scss` file.
+     * this entry should represent the icon name, you want to use in your markup
+     * the class name must be the same as the name of added svg file
+     * add a named list of colour variations for this icon.
+        - Follow the syntax below:
+           ```css
+             'leaf':  (
+               'yellow':     #F6F792,
+               'grey':       #333745,
+               'blue':       #77C4D3
+             ),
+           ```
+  3. use the icon in markup with the following sytnax:
+      ```javascript
+      <svg class="icon-{{icon name}}--{{icon colour name}}}">
+        <use xlink:href="assets/toolkit/svgIcons/svgIcons.svg#{{icon name}}}"></use>
+      </svg>
+      ```
+
 ---
 <div class="icons-preview__container"></div>
