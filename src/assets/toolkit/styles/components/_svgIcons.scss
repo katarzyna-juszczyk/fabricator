@@ -1,0 +1,37 @@
+$display-icons-preview: true;
+$icons-to-preview: "";
+
+@each $iconName, $iconColors in $svgIcons {
+  @each $colorName, $colorValue in $iconColors {
+
+    $icons-to-preview: $icons-to-preview , #{$iconName + '--' + $colorName};
+
+    .icon-#{$iconName}--#{$colorName} {
+      display:block;
+      fill: $colorValue;
+      width: 90px;
+      height: 90px;
+      background: #dedede;
+      margin: 10px;
+    }
+
+  }
+}
+
+/* icons preview stuff */
+@if ($display-icons-preview == true ) {
+  body {border: 10px solid purple;}
+	body::before {
+    content: "#{$icons-to-preview}";
+		display: none;
+	}
+}
+
+body::after {
+	content: "#{$display-icons-preview}";
+	display: none;
+}
+
+.icon-preview {
+	i {padding: 10px}
+}

@@ -33,3 +33,66 @@ $breakpoints: (
 );
 
 $use-markup-fix: false;
+
+$svgIcons: (
+  'bug': (
+      'yellow':     #F6F792,
+      'grey':       #333745,
+      'blue':       #77C4D3,
+      'grey-light': #DAEDE2,
+      'pink':       #EA2E49
+  ),
+  'car': (
+      'pink':       #EA2E49
+  ),
+  'clour': (
+      'blue':       #77C4D3,
+  ),
+  'cup': (
+      'yellow':     #F6F792,
+      'grey-light': #DAEDE2,
+      'pink':       #EA2E49
+  ),
+  'direction': (
+    'yellow':     #F6F792,
+    'grey':       #333745,
+    'pink':       #EA2E49
+  ),
+  'drink':  (
+    'yellow':     #F6F792,
+    'pink':       #EA2E49
+  ),
+  'drink2':  (
+    'yellow':     #F6F792,
+    'grey':       #333745,
+    'pink':       #EA2E49
+  ),
+  'flower':  (
+    'blue':       #77C4D3,
+    'grey-light': #DAEDE2,
+    'pink':       #EA2E49
+  ),
+  'leaf':  (
+    'yellow':     #F6F792,
+    'grey':       #333745,
+    'blue':       #77C4D3
+  ),
+  'mug':  (
+    'yellow':     #F6F792,
+    'grey':       #333745,
+    'blue':       #77C4D3,
+    'grey-light': #DAEDE2
+  ),
+  'scissors':  (
+    'yellow':     #F6F792,
+    'grey':       #333745
+  ),
+  'skull':  (
+    'yellow':     #F6F792
+  ),
+  'snowflake': (
+    'yellow':     #F6F792,
+    'pink':       #EA2E49
+  )
+
+)

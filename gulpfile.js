@@ -7,7 +7,7 @@ var gulpPlugins = require('gulp-load-plugins');
 var $ = gulpPlugins();
 var del = require('del');
 var gulp = require('gulp');
-//console.log($);
+console.log($);
 var reload = browserSync.reload;
 var runSequence = require('run-sequence');
 var webpack = require('webpack');
@@ -27,7 +27,8 @@ var config = {
 			toolkitDir: 'src/assets/toolkit/styles/'
 		},
 		images: 'src/assets/toolkit/images/**/*',
-		views: 'src/toolkit/views/*.html'
+		views: 'src/toolkit/views/*.html',
+		svgIcons: './src/assets/toolkit/svgIcons/*.svg'
 	},
 	dest: 'dist'
 };
@@ -62,7 +63,7 @@ gulp.task('styles:fabricator', function () {
 gulp.task('styles:toolkit', function () {
 	gulp.src(config.src.styles.toolkit)
 		.pipe($.sourcemaps.init())
-		.pipe($.sass().on('error', $.sass.logError))
+		.pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
 		.pipe($.combineMq({	beautify: false	}))
 		.pipe($.autoprefixer('last 1 version'))
 		.pipe($.if(!config.dev, $.csso()))
@@ -104,7 +105,7 @@ gulp.task('scripts', function (done) {
 
 
 // images
-gulp.task('images', ['favicon'], function () {
+gulp.task('images', ['favicon', 'svgIcons'], function () {
 	return gulp.src(config.src.images)
 		.pipe($.imagemin())
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
@@ -115,6 +116,12 @@ gulp.task('favicon', function () {
 		.pipe(gulp.dest(config.dest));
 });
 
+gulp.task('svgIcons', function () {
+	return gulp.src(config.src.svgIcons)
+		.pipe($.svgmin())
+		.pipe($.svgstore())
+		.pipe(gulp.dest(config.dest + '/assets/toolkit/svgIcons'));
+});
 
 
 // assemble
