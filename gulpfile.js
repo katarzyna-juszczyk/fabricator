@@ -75,7 +75,12 @@ gulp.task('styles:toolkit', function () {
 gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
 
-gulp.task('scriptsShame', function () {
+gulp.task('scriptsShame', ['modernizr'],function () {
+	return gulp.src(['./src/assets/toolkit/scripts/**/*'])
+		.pipe(gulp.dest(config.dest + '/assets/toolkit/scripts'));
+});
+
+gulp.task('modernizr', function () {
 	return gulp.src(['./src/assets/toolkit/scripts/**/*'])
 		.pipe($.modernizr({"tests": ['svg', 'flexbox']})) //https://github.com/Modernizr/customizr/blob/develop/test/js/vanilla.js
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/scripts'));
