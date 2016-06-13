@@ -1,1 +1,1 @@
-console.log('lallaa');
+svg4everybody();
