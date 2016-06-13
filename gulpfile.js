@@ -77,6 +77,7 @@ gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
 gulp.task('scriptsShame', function () {
 	return gulp.src(['./src/assets/toolkit/scripts/**/*'])
+		.pipe($.modernizr({"tests": ['svg', 'flexbox']})) //https://github.com/Modernizr/customizr/blob/develop/test/js/vanilla.js
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/scripts'));
 });
 
@@ -108,6 +109,7 @@ gulp.task('favicon', function () {
 	return gulp.src('./src/favicon.ico')
 		.pipe(gulp.dest(config.dest));
 });
+
 
 
 // assemble

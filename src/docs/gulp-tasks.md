@@ -1,12 +1,13 @@
 ### Styles related tasks
 
-* **gulp styles:toolkit**
-  * gulp-autoprefixer
-  * gulp-csso
-  * gulp-sass
-  * gulp-sourcemaps
-  * gulp-combine-mq
+* **gulp styles**
+  * gulp-autoprefixer (https://github.com/sindresorhus/gulp-autoprefixer)
+  * gulp-csso (https://github.com/css/csso)
+  * gulp-sass (https://www.npmjs.com/package/gulp-sass)
+  * gulp-sourcemaps (https://www.npmjs.com/package/gulp-sourcemaps)
+  * gulp-combine-mq (https://www.npmjs.com/package/gulp-combine-mq)
+
   * gulp-modernizr
   * gulp-parker
   * gulp-colorguard
-  * gulp-csscss
+  * gulp-svgstore https://github.com/w0rm/gulp-svgstore
