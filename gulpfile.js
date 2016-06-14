@@ -65,7 +65,7 @@ gulp.task('styles:toolkit', function () {
 		.pipe($.sourcemaps.init())
 		.pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
 		.pipe($.combineMq({	beautify: false	}))
-		.pipe($.autoprefixer('last 1 version'))
+		.pipe($.autoprefixer({ browsers: ['last 3 versions']}))
 		.pipe($.imageEmbed({
 			asset: config.src.images,
 			extension: ['jpg', 'png']

@@ -1,13 +1,18 @@
 .flex-list {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
   padding: 20px 10px 0;
 }
 
 .flex-list__item {
-  flex: 1 20%;
-  min-width: 210px;
+  flex: 1 1 20%;
   margin: 0 10px 20px;
+  min-width: 20%;
+  @media (max-width: 880px) {
+    flex: 1 1 30%;
+    min-width: 30%;
+  }
 }
