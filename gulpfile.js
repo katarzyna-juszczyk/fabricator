@@ -66,6 +66,10 @@ gulp.task('styles:toolkit', function () {
 		.pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
 		.pipe($.combineMq({	beautify: false	}))
 		.pipe($.autoprefixer('last 1 version'))
+		.pipe($.imageEmbed({
+			asset: config.src.images,
+			extension: ['jpg', 'png']
+		}))
 		.pipe($.if(!config.dev, $.csso()))
 		.pipe($.sourcemaps.write())
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
