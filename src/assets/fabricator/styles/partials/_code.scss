@@ -120,6 +120,9 @@ pre[class*='language-'] {
 
 }
 
+.token.tag {
+	text-transform: none;
+}
 .namespace {
 	opacity: 0.7;
 }

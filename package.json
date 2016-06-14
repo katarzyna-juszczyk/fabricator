@@ -88,5 +88,8 @@
     "run-sequence": "^1.0.2",
     "script-loader": "^0.6.1",
     "webpack": "^1.8.11"
+  },
+  "dependencies": {
+    "object-fit-polyfill": "^0.1.0"
   }
 }
