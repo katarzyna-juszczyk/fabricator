@@ -1,6 +1,9 @@
 $container-large--max-width: 1900px;
 $container-medium--max-width: 1170px;
 
+$color--ebony-clay-grey: #2A3341;
+$color--slate-grey: #6A788D;
+$color--geyser-grey: #D5DAE6;
 $color--dark-blue: #364760;
 $color--light-blue: #326295;
 
@@ -9,7 +12,12 @@ $background--medium: $color--light-blue;
 $background--lighter: #eff2f9;
 $background--lightest: #fff;
 
-$text--color-negative: #fff;
+$text-color: $color--ebony-clay-grey;
+$text-color--medium: $color--slate-grey;
+$text-color--negative: #fff;
+
+$border-color--light: $color--geyser-grey;
+
 
 $inuit-enable-btn--small:   true;
 

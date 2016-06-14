@@ -5,7 +5,7 @@
   background: $background--dark;
   @include diagonal-clip-path-element($background--dark, left);
   a {
-    color: $text--color-negative;
+    color: $text-color--negative;
   }
 }
 
@@ -13,7 +13,7 @@
 }
 
 .nav__dropdown-toggle {
-  color: $text--color-negative;
+  color: $text-color--negative;
   .caret {
     display: inline-block;
     width: 0;

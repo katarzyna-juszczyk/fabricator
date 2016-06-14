@@ -1,0 +1,17 @@
+.tag {
+  font-size: 11px;
+  font-family: "Open Sans";
+  color: $text-color--negative;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 6px 8px;
+  &--full {
+    display:block;
+  }
+
+  &--important {
+    background-color: #B5A1DD;
+  }
+
+
+}
