@@ -1,0 +1,5 @@
+.links-list--stripped {
+  .links-list__item:not(:last-child) {
+    border-bottom: 1px solid $border-color--light;
+  }
+}

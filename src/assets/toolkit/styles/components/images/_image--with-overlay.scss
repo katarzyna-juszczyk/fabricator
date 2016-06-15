@@ -1,0 +1,38 @@
+.image--with-overlay {
+  position:relative;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  left:0;
+  bottom: 20px;
+  max-width: 80%;
+  padding: 28px;
+  background: rgba($background--medium, .8);
+
+  font-size: 24px;
+  line-height: 1.2;
+  color: $text-color--negative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -35px;
+    bottom: 0;
+    width: 35px;
+    height: 100%;
+    background: rgba($background--medium, .8);
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+  }
+}
+
+.image-overlay__small {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-top: 10px;
+}

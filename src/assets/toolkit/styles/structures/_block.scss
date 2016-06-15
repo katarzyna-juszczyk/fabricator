@@ -4,3 +4,31 @@
   line-height: 1.5;
   margin-bottom: 0;
 }
+
+.block--extended {
+  display: flex;
+  flex-direction: row;
+
+  .block__left-column {
+     flex: 2;
+     padding-right: 30px;
+     position: relative;;
+  }
+
+  .block__right-column {
+    flex: 1;
+  }
+
+  .image--with-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 30px;
+    bottom: 0;
+
+    flex:1;
+    img {
+      @extend %object-fit-cover;
+    }
+  }
+}

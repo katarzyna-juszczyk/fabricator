@@ -17,3 +17,6 @@
 * **gulp images**
   * gulp-svgmin https://github.com/ben-eb/gulp-svgmin
   * gulp-svgstore https://github.com/w0rm/gulp-svgstore    
+
+
+//TODO add gulp-webstandards
