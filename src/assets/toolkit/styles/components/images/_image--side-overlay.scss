@@ -1,0 +1,38 @@
+.image--side-overlay {
+
+  .image-overlay {
+    bottom: 0;
+    top:0;
+    left: auto;
+    right: 0;
+    width: 40%;
+    background: rgba($background--dark, .8);
+    margin-bottom:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 16px;
+
+    &:hover, &:focus, &:active {
+      .image-overlay {
+        padding-left: 50px;
+      }
+    }
+
+    &:after {
+      right: auto;
+      left: -80px;
+      bottom: 0;
+      width: 80px;
+      height: 100%;
+      background: rgba($background--dark, .8);
+      clip-path: polygon(100% 100%, 100% 0, 0 100%);
+    }
+  }
+
+  .image-overlay__icon {
+    width: 16px;
+    height: 16px;
+    align-self: flex-start;
+  }
+}

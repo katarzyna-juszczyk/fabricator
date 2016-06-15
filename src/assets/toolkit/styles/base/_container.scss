@@ -7,6 +7,7 @@
 .container--medium {
   max-width: $container-medium--max-width;
   margin: 0 auto;
+  padding: 70px 20px;
 }
 
 .container--lighter {
@@ -19,4 +20,6 @@
   color: $text-color;
   line-height: 1.2;
   text-align: left;
+  padding: 0 10px;
+  font-weight: normal;
 }

@@ -45,6 +45,10 @@ $breakpoints: (
 $use-markup-fix: false;
 
 $svgIcons: (
+	'arrow-right': (
+			'white':      #fff,
+			'blue':       $color--light-blue
+	),
   'bug': (
       'yellow':     #F6F792,
       'grey':       #333745,

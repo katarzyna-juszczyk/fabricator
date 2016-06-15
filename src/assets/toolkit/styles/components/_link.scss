@@ -11,9 +11,19 @@
   &:hover, &:focus, &:active {
     text-decoration: none;
   }
-  > strong {
+  > .event__name {
     &:hover, &:focus, &:active {
       text-decoration: underline;
     }
   }
+}
+
+.link--more {
+    .link__icon {
+        fill: currentColor;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+    }
 }

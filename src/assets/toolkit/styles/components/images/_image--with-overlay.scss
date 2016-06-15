@@ -1,6 +1,12 @@
 .image--with-overlay {
   position:relative;
   display: block;
+
+  &:hover, &:focus, &:active {
+    .image-overlay {
+      padding-right: 50px;
+    }
+  }
 }
 
 .image-overlay {
@@ -10,10 +16,12 @@
   max-width: 80%;
   padding: 28px;
   background: rgba($background--medium, .8);
-
+  box-sizing: content-box;
   font-size: 24px;
   line-height: 1.2;
   color: $text-color--negative;
+
+  transition: padding-right .2s ease;
 
   &:after {
     content: '';
@@ -27,6 +35,8 @@
     background: rgba($background--medium, .8);
     clip-path: polygon(100% 0, 0 0, 0 100%);
   }
+
+
 }
 
 .image-overlay__small {
