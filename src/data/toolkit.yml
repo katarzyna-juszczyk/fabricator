@@ -1,12 +1,17 @@
 colors:
-  primary:
-    Light blue: "rgb(0, 144, 212)"
-    Blue: "#326295"
-    Dark blue: "#364760"
-    Green: "#4f891b"
-    Dark green: "#226d19"
-    Red: "#bd141a"
-    Dark red: "#a70c0f"
-  secondary:
-    Light grey: "#eff2f9"
-    Grey: "#d5dae6"
+ primary:
+   brand-primary: "rgb(50, 98, 149)"
+   brand-secondary: "rgb(0, 144, 212)"
+   brand-darken: "rgb(33, 66, 102)"
+ secondary:
+   white: "rgb(255, 255, 255)"
+   dark: "rgb(18, 32, 49)"
+   light-grey: "rgb(241, 243, 248)"
+   grey: "rgb(223, 227, 235)"
+   dark-grey: "rgb(120, 120, 135)"
+ supporting:
+   green: "rgb(134, 181, 25)"
+   orange: "rgb(240, 147, 22)"
+   yellow: "rgb(255, 208, 0)"
+   purple: "rgb(138, 26, 103)"
+   red: "rgb(209, 0, 14)"
