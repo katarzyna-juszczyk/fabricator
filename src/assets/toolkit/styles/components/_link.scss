@@ -11,15 +11,6 @@
   &:hover, &:focus, &:active {
     text-decoration: none;
   }
-  > .event__name {
-    &:hover, &:focus, &:active {
-      text-decoration: underline;
-    }
-  }
-}
-
-.link--more {
-
 }
 
 .link__icon {
@@ -35,15 +26,15 @@
 
 
 .link {
-  &, &:visited, &:hover, &:active, &:focus{
-    backface-visibility:hidden;
-  	position:relative;
-    text-decoration:none;
-    &:before, &:after {
+  backface-visibility:hidden;
+  position:relative;
+
+  &:hover, &:active, &:focus{
+    &:after {
       width:100%;
     }
   }
-  &:before, &:after{
+  &:after{
     content: "";
     transition: .2s all ease;
     backface-visibility: hidden;
@@ -53,11 +44,6 @@
     background: currentColor;
     left:50%;
     transform:translateX(-50%);
-  }
-  &:before{
-    top:-0.25em;
-  }
-  &:after{
-    bottom:-0.25em;
+    bottom:-3px;
   }
 }
