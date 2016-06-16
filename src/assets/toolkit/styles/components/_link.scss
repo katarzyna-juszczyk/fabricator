@@ -19,11 +19,45 @@
 }
 
 .link--more {
-    .link__icon {
-        fill: currentColor;
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        vertical-align: middle;
+
+}
+
+.link__icon {
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    position: relative;
+    top: -2px;
+}
+
+
+.link {
+  &, &:visited, &:hover, &:active, &:focus{
+    backface-visibility:hidden;
+  	position:relative;
+    text-decoration:none;
+    &:before, &:after {
+      width:100%;
     }
+  }
+  &:before, &:after{
+    content: "";
+    transition: .2s all ease;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: currentColor;
+    left:50%;
+    transform:translateX(-50%);
+  }
+  &:before{
+    top:-0.25em;
+  }
+  &:after{
+    bottom:-0.25em;
+  }
 }
