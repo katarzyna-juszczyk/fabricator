@@ -1,44 +1,36 @@
 $container-large--max-width: 1900px;
 $container-medium--max-width: 1170px;
 
-$color--ebony-clay-grey: #2A3341;
-$color--slate-grey: #6A788D;
-$color--geyser-grey: #D5DAE6;
-$color--dark-blue: #364760;
-$color--light-blue: #326295;
 
-$background--dark: $color--dark-blue;
-$background--medium: $color--light-blue;
-$background--lighter: #eff2f9;
-$background--lightest: #fff;
+$color--brand-primary: rgb(50,98,149);
+$color--brand-secondary: rgb(0,144,212);
+$color--brand-dark: rgb(33,66,102);
 
-$text-color: $color--ebony-clay-grey;
-$text-color--medium: $color--slate-grey;
-$text-color--negative: #fff;
+$color--light: rgb(255, 255, 255);
+$color--dark: rgb(18, 32, 49);
+$color--grey-light: rgb(241, 243, 248);
+$color--grey: rgb(223, 227, 235);
+$color--grey-dark: rgb(120, 120, 135);
 
-$link-color: $color--light-blue;
-
-$border-color--light: $color--geyser-grey;
+$color--green: rgb(134, 181, 25);
+$color--orange: rgb(240, 147, 22);
+$color--yellow: rgb(255, 208, 0);
+$color--purple: rgb(138, 26, 103);
+$color--red: rgb(209, 0, 14);
 
 
+$background--dark: $color--brand-dark;
+$background--medium: $color--grey-dark;
+$background--lighter: $color--grey;
+$background--lightest: $color--grey-light;
 
+$text-color: $color--dark;
+$text-color--medium: $color--grey-dark;
+$text-color--negative: $color--light;
 
+$link-color: $color--brand-secondary;
 
-$color--brand-primary: "rgb(50, 98, 149)";
-$color--brand-secondary: "rgb(0, 144, 212)";
-$color--brand-dark: "rgb(33, 66, 102)";
-
-$color--light: "rgb(255, 255, 255)";
-$color--dark: "rgb(18, 32, 49)";
-$color--grey-light: "rgb(241, 243, 248)";
-$color--grey: "rgb(223, 227, 235)";
-$color--grey-dark: "rgb(120, 120, 135)";
-
-$color--green: "rgb(134, 181, 25)";
-$color--orange: "rgb(240, 147, 22)";
-$color--yellow: "rgb(255, 208, 0)";
-$color--purple: "rgb(138, 26, 103)";
-$color--red: "rgb(209, 0, 14)";
+$border-color--light: $color--grey;
 
 
 $inuit-enable-btn--small:   true;
@@ -67,12 +59,12 @@ $use-markup-fix: false;
 $svgIcons: (
 	'arrow-right': (
 			'white': $color--light,
-			'blue': $color--light-blue
+			'blue': $color--brand-primary
 	),
 
 	'logo': (
 			'white': $color--light,
-			'blue': $color--light-blue
+			'blue': $color--brand-primary
 	),
 
 )
