@@ -8,7 +8,7 @@ $(function () {
         var html = '<div class="icon-preview"><ol>';
 
         for (var i = 1; i < iconsList.length; i++) {
-            html += '<li><h6>icon-'+iconsList[i]+'</h6>'
+            html += '<li><h6>icon-'+iconsList[i].trim()+'</h6>'
             + '<svg class="icon-'+iconsList[i].trim()+'">'
             + '<use xlink:href="assets/toolkit/svgIcons/svgIcons.svg#'+iconsList[i].trim().substring(0, iconsList[i].trim().indexOf("--"))+'" />'
             + '</svg>'

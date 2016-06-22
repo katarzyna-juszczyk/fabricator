@@ -28,7 +28,7 @@ var config = {
 		},
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html',
-		svgIcons: './src/assets/toolkit/svgIcons/*.svg'
+		svgIcons: 'src/assets/toolkit/svgIcons/*.svg'
 	},
 	dest: 'dist'
 };
@@ -182,6 +182,8 @@ gulp.task('serve', function () {
 	gulp.task('scriptsShame:watch', ['scriptsShame']);
 	gulp.watch('src/assets/toolkit/scripts/**/*.js', ['scriptsShame:watch']);
 
+	gulp.task('svgIcons:watch', ['svgIcons'], reload);
+	gulp.watch(config.src.svgIcons, ['svgIcons:watch']);
 
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
