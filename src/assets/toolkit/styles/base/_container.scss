@@ -1,25 +1,24 @@
-
 .container--large {
-  max-width: $container-large--max-width;
-  margin: 0 auto;
+	max-width: $container-large--max-width;
+	margin: 0 auto;
 }
 
 .container--medium {
-  max-width: $container-medium--max-width;
-  margin: 0 auto;
-  padding: 70px 20px;
+	max-width: $container-medium--max-width;
+	margin: 0 auto;
+	padding: 70px 20px;
 }
 
 .container--lighter {
-  background: $background--lighter;
+	background: $background--lighter;
 }
 
 .container__heading {
-  font-size: 20px;
-  font-family: "Open Sans";
-  color: $text-color;
-  line-height: 1.2;
-  text-align: left;
-  padding: 0 10px;
-  font-weight: normal;
+	font-size: 20px;
+	font-family: "Open Sans";
+	color: $text-color;
+	line-height: 1.2;
+	text-align: left;
+	padding: 0 10px;
+	font-weight: normal;
 }
