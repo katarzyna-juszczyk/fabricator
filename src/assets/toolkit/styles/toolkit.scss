@@ -51,7 +51,10 @@
 @import "../../../../node_modules/inuit-tables/objects.tables";
 @import "../../../../node_modules/inuit-tabs/objects.tabs";
 
-@import "vendor/csswizardry-grids";
+// VENDOR:
+@import "vendor/_csswizardry-grids";
+@import "vendor/_slick";
+@import "vendor/_slick-theme";
 
 // COMPONTENTS:
 @import "components/svgIcons";
@@ -73,6 +76,8 @@
 @import "components/navbar/navbar__user";
 @import "components/count-down";
 @import "components/destination-map";
+
+
 
 
 // STRUCTURES:
