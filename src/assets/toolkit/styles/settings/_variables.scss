@@ -11,6 +11,7 @@ $color--dark: rgb(18, 32, 49);
 $color--grey-light: rgb(241, 243, 248);
 $color--grey: rgb(223, 227, 235);
 $color--grey-dark: rgb(120, 120, 135);
+$color--grey-darkest: rgb(42, 51, 65);
 
 $color--green: rgb(134, 181, 25);
 $color--orange: rgb(240, 147, 22);
@@ -26,6 +27,7 @@ $background--lightest: $color--grey-light;
 
 $text-color: $color--dark;
 $text-color--medium: $color--grey-dark;
+$text-color-dark: $color--grey-darkest;
 $text-color--negative: $color--light;
 
 $link-color: $color--brand-secondary;
