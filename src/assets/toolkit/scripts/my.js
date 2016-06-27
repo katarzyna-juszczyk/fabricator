@@ -1,7 +1,17 @@
 svg4everybody();
 
 $(document).ready(function(){
-   $('.main-slider').slick({
+
+  $('.main-slider').on('init', function(slick) {
+
+    $.each($('.main-slider__heading'), function(i,e) {
+      $clamp(e, {clamp: 3});
+    });
+
+  });
+
+
+  $('.main-slider').slick({
       dots: true,
       infinite: true,
       speed: 500,
@@ -11,4 +21,7 @@ $(document).ready(function(){
       centerMode: true,
       focusOnSelect: true
   });
+
+
+
  });

@@ -33,6 +33,7 @@
   transform: skew(-25deg, 0) ;
   overflow: hidden;
   position: relative;
+  margin-bottom: 0;
   &:after {
     content: '';
     display: block;
@@ -65,15 +66,21 @@
   transform-origin: bottom left;
   position: absolute;
   bottom: 55px;
-  left: -35px;
   left: 0;
-  max-width: 50%;
-  background: rgba($background--lightest, .8);
+  max-width: 88%;
+  min-width: 50%;
+  background: rgba($background--lightest,.8);
   padding: 25px 76px;
+  max-height: 350px;
+  overflow: hidden;
 }
 
 .main-slider__heading {
   margin-bottom:0;
+  position: relative;
+  line-height: 1.2em;
+  overflow: hidden;
+  margin-bottom: 10px;
 
 }
 
