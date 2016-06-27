@@ -1,7 +1,13 @@
 "use strict";
 
 function initMap() {
-	var map;
+
+	var map = document.getElementById('map');
+
+	if(map === null) {
+		return false;
+	}
+
 	var marker;
 	var country = "New Zeland";
 	var geocoder = new google.maps.Geocoder();
@@ -13,7 +19,7 @@ function initMap() {
 		['Hamilton', -37.786096, 175.278447, 'https://www.google.pl/']
 	];
 
-	map = new google.maps.Map(document.getElementById('map'), {
+	map = new google.maps.Map(map, {
 		zoom: 5
 	});
 
