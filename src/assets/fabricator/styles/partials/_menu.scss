@@ -28,6 +28,7 @@
 	> ul {
 		margin-top: 0;
 		margin-bottom: 1rem;
+		margin-left: 1.5rem;
 
 		> li {
 			margin-top: 1rem;
@@ -35,6 +36,7 @@
 	}
 
 	li {
+		position: relative;
 		list-style-type: none;
 		margin-top: 0;
 		margin-bottom: 0;
@@ -59,13 +61,54 @@
 	}
 
 	.f-menu__heading {
-		padding-left: 1.5rem;
+		padding-left: 1.6rem;
 		font-weight: 700;
 		font-size: .6875rem;
 		text-transform: uppercase;
+		display: inline-block;
 
 		&:hover {
 			color: map-get($colors, normal);
 		}
 	}
 }
+
+.f-menu-accordion{
+	&__list {
+		height: 0px;
+		overflow: hidden;
+		margin-left: 0;
+	}
+
+	&__toggle {
+		border: none;
+		background: none;
+		padding: .5rem;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: map-get($colors, menu-text);
+		line-height: 1;
+		font-size: .6875rem;
+		transform: rotate(-90deg);
+
+		&:focus, &:active {
+			outline: none;
+		}
+
+		&:after {
+			content: '▼';
+		}
+	}
+
+	&.is-open  {
+		.f-menu-accordion__toggle {
+			transform: rotate(0deg);
+		}
+		.f-menu-accordion__list {
+			height: auto;
+		}
+	}
+}
+

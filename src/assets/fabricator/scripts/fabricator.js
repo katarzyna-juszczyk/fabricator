@@ -58,7 +58,8 @@ fabricator.dom = {
 	root: document.querySelector('html'),
 	primaryMenu: document.querySelector('.f-menu'),
 	menuItems: document.querySelectorAll('.f-menu li a'),
-	menuToggle: document.querySelector('.f-menu-toggle')
+	menuToggle: document.querySelector('.f-menu-toggle'),
+	menuAccordions: document.querySelectorAll('.f-menu-accordion__toggle')
 };
 
 
@@ -153,7 +154,6 @@ fabricator.setActiveItem = function () {
 
 		// set the matched item as active
 		fabricator.dom.menuItems[index].classList.add('f-active');
-
 	};
 
 	window.addEventListener('hashchange', setActive);
@@ -357,6 +357,24 @@ fabricator.setInitialMenuState = function () {
 
 };
 
+/**
+  * Open/Close menu accordions on click
+ */
+fabricator.toggleAccordions = function() {
+
+	for(var i = 0; i < fabricator.dom.menuAccordions.length; i++) {
+		fabricator.dom.menuAccordions[i].addEventListener('click', function(e) {
+			var classList = e.currentTarget.parentNode.classList;
+			if(classList.toString().indexOf('is-open') > -1) {
+				e.currentTarget.parentNode.classList.remove('is-open');
+			} else {
+				e.currentTarget.parentNode.classList.add('is-open');
+			}
+		});
+	}
+
+	return this;
+};
 
 /**
  * Initialization
@@ -369,6 +387,7 @@ fabricator.setInitialMenuState = function () {
 		.menuToggle()
 		.allItemsToggles()
 		.singleItemToggle()
+		.toggleAccordions()
 		.buildColorChips()
 		.setActiveItem()
 		.bindCodeAutoSelect();
