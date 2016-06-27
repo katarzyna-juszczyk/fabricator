@@ -154,6 +154,7 @@ fabricator.setActiveItem = function () {
 
 		// set the matched item as active
 		fabricator.dom.menuItems[index].classList.add('f-active');
+		fabricator.dom.menuItems[index].parentNode.classList.add('is-open');
 	};
 
 	window.addEventListener('hashchange', setActive);
