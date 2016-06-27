@@ -1,0 +1,55 @@
+.page-footer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	@include media-query(portable) {
+		flex-direction: column;
+	}
+
+	&__header {
+		flex-grow: 2;
+		@include media-query(portable) {
+			flex-grow: 1;
+			text-align: center;
+		}
+	}
+
+	&__brand {
+		display: inline-block;
+		@include media-query(portable) {
+			display: block;
+			margin-bottom: 24px;
+		}
+	}
+
+	&__list {
+		display: inline-block;
+		margin-left: 10px;
+		vertical-align: middle;
+		@include media-query(portable) {
+			display: block;
+			margin-left: 0;
+			margin-bottom: 24px;
+		}
+		li {
+			margin-left: 20px;
+		}
+	}
+
+	&__link {
+		font-size: 14px;
+	}
+
+	&__extras {
+		flex-grow: 1;
+		text-align: right;
+		@include media-query(portable) {
+			text-align: center;
+		}
+
+		small {
+			font-size: 12px;
+		}
+	}
+}
