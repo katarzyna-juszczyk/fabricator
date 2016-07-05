@@ -1,0 +1,166 @@
+.ui-datepicker {
+	padding: 0 0 10px 0;
+	width: auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	border: none;
+	max-width: 400px;
+
+	table {
+		font-size: 14px;
+	}
+
+	th {
+		border-bottom: 1px solid $border-color--light;
+		color: $text-color-dark;
+	}
+
+	td {
+		width: 14.3%;
+		position: relative;
+		padding: 0;
+		color: $text-color-dark;
+		cursor: pointer;
+		background-clip: padding-box;
+
+		&::after {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+
+		&::before {
+			content: "";
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+		}
+
+		.ui-state-default {
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+			background: transparent;
+			font-size: 14px;
+			border: none;
+			color: inherit;
+		}
+
+		&:hover {
+			color: $color--light;
+
+			a {
+				color: inherit;
+			}
+
+			&::before {
+				background-color: $color--brand-primary;
+			}
+		}
+	}
+
+	.ui-datepicker-today {
+		&::before {
+			background: $background--lighter;
+		}
+	}
+
+	.ui-state-highlight {
+		font-weight: bold;
+	}
+
+	.ui-state-hover {
+		border: none;
+	}
+
+	.ui-datepicker-next, .ui-datepicker-prev {
+		position: relative;
+		cursor: pointer;
+		color: $color--brand-primary;
+		border-radius: 50%;
+		width: 14.3%;
+		height: auto;
+		top: auto;
+
+		&::before {
+			content: "";
+			position: absolute;
+			border-style: solid;
+			border-width: 2px 2px 0 0;
+			display: inline-block;
+			height: 10px;
+			width: 10px;
+			transform: rotate(-45deg);
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+
+		&:hover {
+			color: $color--light;
+			background: $color--brand-primary;
+		}
+	}
+
+	.ui-datepicker-next {
+		order: 1;
+		right: auto;
+		&::before {
+			transform: rotate(45deg);
+		}
+	}
+
+	.ui-datepicker-prev {
+		left: auto;
+		&::before {
+			transform: rotate(-135deg);
+		}
+	}
+
+	.ui-icon {
+		@extend .visually-hidden;
+	}
+
+	.ui-datepicker-unselectable {
+		color: $color--grey;
+		&:hover {
+			color: $color--grey;
+			&::before {
+				background: $color--light;
+				color: $text-color-dark;
+			}
+		}
+	}
+
+	.ui-datepicker-header {
+		font-weight: bold;
+		background: #fff;
+		border: none;
+		font-size: 14px;
+		color: $text-color-dark;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+	}
+
+	.ui-datepicker-title {
+		flex-grow: 2;
+	}
+}
+
+

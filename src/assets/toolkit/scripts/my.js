@@ -22,6 +22,9 @@ $(document).ready(function(){
       focusOnSelect: true
   });
 
+  $('#datepicker').datepicker({
+	  showOtherMonths: true
+  });
  });
 
 
